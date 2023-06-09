@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="~/plugins/themify/css/themify-icons.css">
     <link rel="stylesheet" href="~/plugins/slick-carousel/slick-theme.css">
     <link rel="stylesheet" href="~/plugins/slick-carousel/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <!-- Slick Carousel -->
     <link rel="stylesheet" href="~/plugins/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="~/plugins/owl-carousel/owl.theme.default.min.css">
@@ -31,13 +33,11 @@
 <body>
 
     @* Partials*@
-   
+
     <partial name="_NavBarPartialView" />
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+
+    @RenderBody()
+
     <partial name="_FooterPartialView" />
 
 
@@ -52,8 +52,6 @@
     <script src="~/plugins/magnific-popup/magnific-popup.js"></script>
     <!-- Instagram Feed Js -->
     <script src="~/plugins/instafeed-js/instafeed.min.js"></script>
-    <!-- Google Map -->
-    <script src="~/maps/api/js_key_AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw.js"></script>
     <script src="~/plugins/google-map/gmap.js"></script>
     <!-- main js -->
     <script src="~/js/custom.js"></script>

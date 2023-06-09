@@ -1,12 +1,21 @@
 ﻿
 #dropdownMenuButton {
-    background-color:black;
-    border-radius:5px;
-    padding:0px;
+    background-color: black;
+    border-radius: 5px;
+    padding: 0px;
 }
-.forgotPass{
+
+
+.forgotPass {
     font-family: Cambria;
-    font-style:italic;
-    margin-left:220px;
+    font-style: italic;
+    margin-left: 220px;
 }
+
+.search-form {
+    display: flex;
+    justify-content: center;
+}
+
+
 
