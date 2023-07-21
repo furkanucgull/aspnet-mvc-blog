@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Revolve - Personal Magazine blog Template</title>
@@ -31,15 +30,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
-
-    @* Partials*@
-
-    <partial name="_NavBarPartialView" />
-
+    @await Component.InvokeAsync("NavBar")
     @RenderBody()
-
-    <partial name="_FooterPartialView" />
-
+    @await Component.InvokeAsync("Footer")
 
     @* Scripts*@
     <script src="~/plugins/jquery/jquery.js"></script>
@@ -55,6 +48,5 @@
     <script src="~/plugins/google-map/gmap.js"></script>
     <!-- main js -->
     <script src="~/js/custom.js"></script>
-
-</body>
+    </body>
 </html>

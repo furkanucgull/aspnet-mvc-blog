@@ -5,7 +5,9 @@
         <div class="row align-items-center">
             <div class="col-lg-2 col-md-4 text-center d-none d-lg-block">
                 <a class="navbar-brand ">
-                    <img src="~/images/SiliconmadeLogo.png" alt="" class="img-fluid">
+                    <a href="@Url.Action("Index", "Home")">
+                        <img src="~/images/SiliconmadeLogo.png" alt="" class="img-fluid">
+                    </a>
                 </a>
             </div>
             <div class="col-lg-8 col-md-12">
@@ -27,14 +29,23 @@
                                     Blog Posts
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                    <a href="@Url.Action("Detail", "Blog")">Blog Details</a>
+                                    <a href="@Url.Action("Detail","Blog")">Blog Details</a>
                                     <a href="@Url.Action("Search","Blog")">Blog Search</a>
                                 </div>
                             </li>
                             <li class="nav-item">
                                 <a href="@Url.Action("Detail","Page")" class="nav-link">About</a>
                             </li>
-                            <li class="nav-item"><a href="@Url.Action("Index","Category")" class="nav-link">Category</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a href="@Url.Action("Index","Category")" class="nav-link">Category</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                    <a asp-action="Travel" asp-controller="Category">Travel</a>
+                                    <a asp-action="Weekends" asp-controller="Category">Weekends</a>
+                                    <a asp-action="Lifestyle" asp-controller="Category">Lifestyle</a>
+                                    <a asp-action="Explore" asp-controller="Category">Explore</a>
+                                </div>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Post Format
@@ -48,7 +59,15 @@
                                 </div>
 
                             </li>
-                            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+                            <li class="nav-item">
+                                <a class="nav-link">
+                                    <div class="text-right search d-none d-lg-block">
+                                        <div class="search_toggle"><i class="ti-search"></i></div>
+                                    </div>
+                                </a>
+                            </li>
+
                         </ul>
                         @* Register and Login*@
                         <div class="dropdown">
@@ -60,6 +79,9 @@
                                 <a class="dropdown-item" href="@Url.Action("Login","Auth")">Login</a>
                             </div>
                         </div>
+
+
+
 
                         <ul class="list-inline mb-0 d-block d-lg-none">
                             <li class="list-inline-item"><a href="#"><i class="ti-facebook"></i></a></li>
